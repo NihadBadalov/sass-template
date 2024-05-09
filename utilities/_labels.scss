@@ -1,0 +1,34 @@
+@use "sass:list";
+@use "../abstracts" as *;
+
+$label_sizes: (
+  "sm": (23px 33px),
+  "lg": (30px 40px),
+);
+$label_colors: (
+  "red": $color-accent-500,
+  "green": $color-primary-100,
+);
+
+@each $size_name, $sizes in $label_sizes {
+  @each $clr_name, $clr in $label_colors {
+    .#{$clr_name}_label-#{$size_name} {
+     position: relative;
+     padding-left: calc(list.nth($sizes, 1) + 5px);
+     vertical-align: bottom;
+    }
+
+    .#{$clr_name}_label-#{$size_name}::before {
+      content: '';
+      background-color: $clr;
+
+      height: list.nth($sizes, 2);
+      width: list.nth($sizes, 1);
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

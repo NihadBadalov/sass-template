@@ -1,0 +1,15 @@
+@forward "base";
+@forward "utilities";
+@forward "components";
+
+.wrapper {
+  // min-width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+main {
+  flex: 1;
+}

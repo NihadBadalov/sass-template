@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+@each $size_num, $size_rem in $sizes {
+  .p-#{$size_num} {
+    padding: $size_rem;
+  }
+
+  .pt-#{$size_num} {
+    padding-top: $size_rem;
+  }
+
+  .pb-#{$size_num} {
+    padding-bottom: $size_rem;
+  }
+
+  .pr-#{$size_num} {
+    padding-right: $size_rem;
+  }
+
+  .pl-#{$size_num} {
+    padding-left: $size_rem;
+  }
+
+  .px-#{$size_num} {
+    padding-left: $size_rem;
+    padding-right: $size_rem;
+  }
+
+  .py-#{$size_num} {
+    padding-top: $size_rem;
+    padding-bottom: $size_rem;
+  }
+}

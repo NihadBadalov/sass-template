@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+@each $size_num, $size_rem in $sizes {
+  .fs-#{$size_num} {
+    font-size: $size_rem;
+  }
+}

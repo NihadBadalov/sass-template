@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+@each $size_num, $size_rem in $sizes {
+  .m-#{$size_num} {
+    margin: $size_rem;
+  }
+
+  .mt-#{$size_num} {
+    margin-top: $size_rem;
+  }
+
+  .mb-#{$size_num} {
+    margin-bottom: $size_rem;
+  }
+
+  .mr-#{$size_num} {
+    margin-right: $size_rem;
+  }
+
+  .ml-#{$size_num} {
+    margin-left: $size_rem;
+  }
+
+  .mx-#{$size_num} {
+    margin-left: $size_rem;
+    margin-right: $size_rem;
+  }
+
+  .my-#{$size_num} {
+    margin-top: $size_rem;
+    margin-bottom: $size_rem;
+  }
+}
